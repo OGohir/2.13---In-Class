@@ -1,0 +1,97 @@
+
+/*
+ * This code returns the information on new plots of houses. Each of the plots have different names
+ * which means that their keys will be differnet. Keys can hold the values of String, int or double.
+ * Keys with the value of String hold the name of the key, which is the name of the plot of the house.
+ * Keys with the value of int, hold the value of how many keys the person needs for their new house.
+ * Keys with the value double, holds the initial number of the key. This is indicated which double numbers such as 1.1,1.2,1.3,1.4 etc...
+ */
+
+//'Key' is the class
+public class Key 
+{
+    /*information about MainClass is stored in the object 'informationKey'. 
+     *this means that the information which is the fields, (variables/objects
+     *created outside of methods) is accessed through the MainClass class.
+     */
+    MainClass informationKey;
+    
+    /* 
+       Key is a method name. This method gets the value of each field and assigns it a value
+       according to the variable of the new method. These are used to set values of the MainClass
+       object named 'informationKey'. it stores ifnormation about the informationKey and the method
+       assigns the given values to the corresponfing fields within the object.
+       String, int, double are all parameter-types. plotName, keyNumber, keyCount are all parameters.
+       Parameters are values given to a method.
+    */
+
+    public Key(String plotName, int keyCount, double keyNumber) 
+    {
+        //creates a new instance of information and assigns it to the 'informationKey' field
+        informationKey = new MainClass();
+        
+        //If user inputs value into this method, the methods information will be equal to that of the fields value.
+        //'informationKey' thats an object, is called on 'plotName' which is a field, and set to be equal to plotName
+        informationKey.plotName = plotName;
+        //'informationKey' thats an object, is called on 'keyNumber' which is a field, and set to be equal to 'keyNumber'
+        informationKey.keyNumber = keyNumber;
+        //'informationKey' thats an object, is called on 'keyCount' which is a field, and set to be equal to the 'keyCount'
+        informationKey.keyCount = keyCount;
+    }
+    
+    /* gets the keyCount, which has the return value of double. this methods name is 'getKeyCount' which has the value of how many keys the person needs for their new house.
+     * This method returns an int, and does not recieve any arguments.
+     */ 
+    public int getKeyCount() 
+    {
+        //stores the new value of 'informationKey.keyCount' 
+        return informationKey.keyCount; 
+    }
+    
+    /* gets the plotName, which has the return value of String. this methods name is 'getPlotName' which has the value of the name the plot is assigned to.
+     * This method returns a String, and does not recieve any arguments.
+     */
+    public String getPlotName(String plotName)
+    {
+        //stores the new value of 'informationKey.plotName'
+        return informationKey.plotName; 
+    }
+    
+    /* gets the keyNumber, which has the return value of double. this methods name is 'getkeyNumber' which has the value of the number the key is assigned to. This is indicated which double numbers such as 1.1,1.2,1.3,1.4 etc...
+     * This method returns a double, and does not recieve any arguments. 
+     */
+    public double getkeyNumber() 
+    {
+        //stores the new value of 'informationKey.keyNumber'
+        return informationKey.keyNumber;
+    }
+}
+
+//'MainClass' is the class
+public class MainClass 
+{
+    /*variable declaration, also known as fields. Fields are variables declared outside of Methods.
+     *i used the fields in this class because the 'Key' class would not compile without it. 
+     * This is because it the public class 'Key' cannot access a static method which is why i intially set these variables as fields.
+     * 
+     */
+    
+    //keyCount is a variable with the variable type of int. It holds the value of how many keys the person needs for their new house.
+    int keyCount;
+    //plotName is a variable with the variable type of String. it holds the name of the plot house. Differnt types of houses from the builder have different names.
+    String plotName;
+    //keyNumber is a variable with the variable type of double. it holds the initial number of the key. This is indicated which double numbers such as 1.1,1.2,1.3,1.4 etc...
+    double keyNumber;
+    
+    //this is a method called 'instantiateObject' which ahs the return type of void. It returns nothing.
+    public static void instantiateObject()
+    {
+        /*i used the fields in this method because the 'Key' class would not compile without it. 
+         * This is because it the public class 'Key' cannot access a static method which is why i intially set these variables as fields.
+         */
+        int keyCount;
+        String plotName;
+        double keyNumber;
+    }
+    
+}
